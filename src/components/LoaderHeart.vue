@@ -15,7 +15,7 @@ export default defineComponent({
   --vb-loader-heart-background-color: #ffffff;
 }
 
-.lds-heart {
+.vb-loader.lds-heart {
   display: inline-block;
   position: relative;
   width: 80px;
@@ -23,7 +23,7 @@ export default defineComponent({
   transform: rotate(45deg);
   transform-origin: 40px 40px;
 }
-.lds-heart div {
+.vb-loader.lds-heart div {
   top: 32px;
   left: 32px;
   position: absolute;
@@ -32,8 +32,8 @@ export default defineComponent({
   background: var(--vb-loader-heart-background-color);
   animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-.lds-heart div:after,
-.lds-heart div:before {
+.vb-loader.lds-heart div:after,
+.vb-loader.lds-heart div:before {
   content: ' ';
   position: absolute;
   display: block;
@@ -41,11 +41,11 @@ export default defineComponent({
   height: 32px;
   background: var(--vb-loader-heart-background-color);
 }
-.lds-heart div:before {
+.vb-loader.lds-heart div:before {
   left: -24px;
   border-radius: 50% 0 0 50%;
 }
-.lds-heart div:after {
+.vb-loader.lds-heart div:after {
   top: -24px;
   border-radius: 50% 50% 0 0;
 }
