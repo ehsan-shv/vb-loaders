@@ -1,15 +1,15 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <LoaderFacebook />
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
+import LoaderFacebook from './components/LoaderFacebook.vue';
 
 export default defineComponent({
   name: 'App',
   components: {
-    HelloWorld,
+    LoaderFacebook,
   },
 });
 </script>
@@ -22,5 +22,6 @@ export default defineComponent({
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  background-color: #2c3e50;
 }
 </style>
