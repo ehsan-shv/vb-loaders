@@ -1,8 +1,8 @@
 <template>
   <div class="vb-loader lds-facebook">
-    <div></div>
-    <div></div>
-    <div></div>
+    <div />
+    <div />
+    <div />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default defineComponent({
 
 <style lang="scss">
 :root {
-  --vb-loader-background-color: #ffffff;
+  --vb-loader-facebook-background-color: #ffffff;
 }
 
 .vb-loader.lds-facebook {
@@ -30,7 +30,7 @@ export default defineComponent({
   position: absolute;
   left: 8px;
   width: 16px;
-  background: var(--vb-loader-background-color);
+  background: var(--vb-loader-facebook-background-color);
   animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
 .vb-loader.lds-facebook div:nth-child(1) {
