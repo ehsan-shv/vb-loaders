@@ -2,6 +2,7 @@
   <div><LoaderFacebook /></div>
   <div><LoaderRing /></div>
   <div><LoaderCircle /></div>
+  <div><LoaderRoller /></div>
 </template>
 
 <script lang="ts">
@@ -9,6 +10,7 @@ import { defineComponent } from 'vue';
 import LoaderCircle from './components/LoaderCircle.vue';
 import LoaderFacebook from './components/LoaderFacebook.vue';
 import LoaderRing from './components/LoaderRing.vue';
+import LoaderRoller from './components/LoaderRoller.vue';
 
 export default defineComponent({
   name: 'App',
@@ -16,6 +18,7 @@ export default defineComponent({
     LoaderFacebook,
     LoaderRing,
     LoaderCircle,
+    LoaderRoller,
   },
 });
 </script>
@@ -30,7 +33,7 @@ export default defineComponent({
   margin-top: 60px;
   background-color: #2c3e50;
 
-  div {
+  & > div {
     margin: 40px 0;
   }
 }
