@@ -9,6 +9,7 @@
   <div><LoaderEllipsis /></div>
   <div><LoaderDefault /></div>
   <div><LoaderSpinner /></div>
+  <div><LoaderRipple /></div>
 </template>
 
 <script lang="ts">
@@ -23,6 +24,7 @@ import LoaderGrid from './components/LoaderGrid.vue';
 import LoaderEllipsis from './components/LoaderEllipsis.vue';
 import LoaderDefault from './components/LoaderDefault.vue';
 import LoaderSpinner from './components/LoaderSpinner.vue';
+import LoaderRipple from './components/LoaderRipple.vue';
 
 export default defineComponent({
   name: 'App',
@@ -37,6 +39,7 @@ export default defineComponent({
     LoaderEllipsis,
     LoaderDefault,
     LoaderSpinner,
+    LoaderRipple,
   },
 });
 </script>
