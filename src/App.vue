@@ -4,6 +4,7 @@
   <div><LoaderCircle /></div>
   <div><LoaderRoller /></div>
   <div><LoaderRing /></div>
+  <div><LoaderHeart /></div>
 </template>
 
 <script lang="ts">
@@ -13,6 +14,7 @@ import LoaderFacebook from './components/LoaderFacebook.vue';
 import LoaderDualRing from './components/LoaderDualRing.vue';
 import LoaderRoller from './components/LoaderRoller.vue';
 import LoaderRing from './components/LoaderRing.vue';
+import LoaderHeart from './components/LoaderHeart.vue';
 
 export default defineComponent({
   name: 'App',
@@ -22,6 +24,7 @@ export default defineComponent({
     LoaderCircle,
     LoaderRoller,
     LoaderRing,
+    LoaderHeart,
   },
 });
 </script>
