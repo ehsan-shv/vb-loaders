@@ -14,10 +14,10 @@
     <div><LoaderHourglass /></div>
   </section>
   <div class="glass" />
-  <LoaderContent :blur="true">
+  <LoaderContent class="blurLoaderContent" :blur="true" innerLoader="LoaderSpinner">
     <div class="glass" />
   </LoaderContent>
-  <LoaderContent>
+  <LoaderContent innerLoader="LoaderSpinner">
     <div class="glass" />
   </LoaderContent>
 </template>
@@ -76,12 +76,16 @@ export default defineComponent({
     background-color: #2c3e50;
   }
 
+  .blurLoaderContent {
+    --vb-loader-spinner-background-color: #212121;
+  }
+
   .glass {
     height: 100vh;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(https://images.unsplash.com/photo-1646316924344-8e162ab28cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    background-image: url(https://images.unsplash.com/photo-1646322758610-cf84eb050f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
   }
 }
 </style>
