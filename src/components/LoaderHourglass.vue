@@ -2,14 +2,6 @@
   <div class="vb-loader lds-hourglass"></div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'LoaderHourGlass',
-});
-</script>
-
 <style lang="scss">
 :root {
   --vb-loader-hourGlass-background-color: #ffffff;

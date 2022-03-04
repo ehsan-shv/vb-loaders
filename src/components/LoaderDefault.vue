@@ -15,14 +15,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'LoaderDefault',
-});
-</script>
-
 <style lang="scss">
 :root {
   --vb-loader-default-background-color: #ffffff;

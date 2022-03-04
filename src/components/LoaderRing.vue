@@ -7,14 +7,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'LoaderRing',
-});
-</script>
-
 <style lang="scss">
 :root {
   --vb-loader-ring-background-color: #ffffff;

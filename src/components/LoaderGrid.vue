@@ -12,14 +12,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'LoaderGrid',
-});
-</script>
-
 <style lang="scss">
 :root {
   --vb-loader-grid-background-color: #ffffff;

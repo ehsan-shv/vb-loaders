@@ -5,14 +5,6 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'LoaderRipple',
-});
-</script>
-
 <style lang="scss">
 :root {
   --vb-loader-ripple-background-color: #ffffff;

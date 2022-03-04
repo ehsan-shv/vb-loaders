@@ -2,14 +2,6 @@
   <div class="vb-loader lds-dual-ring" />
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'LoaderDualRing',
-});
-</script>
-
 <style lang="scss">
 :root {
   --vb-loader-dual-ring-background-color: #ffffff;
