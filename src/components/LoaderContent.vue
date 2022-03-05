@@ -1,5 +1,5 @@
 <template>
-  <div class="vb-loaderContent" :class="{ blur, disable: !disable }">
+  <div class="vb-loaderContent" :class="{ blur, fullScreen, disable: !disable }">
     <slot />
     <LoaderFacebook v-if="innerLoader === 'LoaderFacebook' && disable" />
     <LoaderDualRing v-if="innerLoader === 'LoaderDualRing' && disable" />
@@ -60,6 +60,10 @@ export default defineComponent({
       type: String,
       default: '',
     },
+    fullScreen: {
+      type: Boolean,
+      default: false,
+    },
   },
 });
 </script>
@@ -81,6 +85,13 @@ export default defineComponent({
     &::after,
     .vb-loader {
       display: none;
+    }
+  }
+
+  &.fullScreen {
+    &::after,
+    .vb-loader {
+      position: fixed;
     }
   }
 
