@@ -1,29 +1,72 @@
 <template>
+  <div class="control"><button @click="loading = !loading">disable/ enable loading</button></div>
   <section>
-    <div><LoaderFacebook /></div>
-    <div><LoaderDualRing /></div>
-    <div><LoaderCircle /></div>
-    <div><LoaderRoller /></div>
-    <div><LoaderRing /></div>
-    <div><LoaderHeart /></div>
-    <div><LoaderGrid /></div>
-    <div><LoaderEllipsis /></div>
-    <div><LoaderDefault /></div>
-    <div><LoaderSpinner /></div>
-    <div><LoaderRipple /></div>
-    <div><LoaderHourglass /></div>
+    <div class="container">
+      <div>
+        <LoaderFacebook />
+        <h2>Facebook</h2>
+      </div>
+      <div>
+        <LoaderDualRing />
+        <h2>DualRing</h2>
+      </div>
+      <div>
+        <LoaderCircle />
+        <h2>Circle</h2>
+      </div>
+      <div>
+        <LoaderRoller />
+        <h2>Roller</h2>
+      </div>
+      <div>
+        <LoaderRing />
+        <h2>Ring</h2>
+      </div>
+      <div>
+        <LoaderHeart />
+        <h2>Heart</h2>
+      </div>
+      <div>
+        <LoaderGrid />
+        <h2>Grid</h2>
+      </div>
+      <div>
+        <LoaderEllipsis />
+        <h2>Ellipsis</h2>
+      </div>
+      <div>
+        <LoaderDefault />
+        <h2>Default</h2>
+      </div>
+      <div>
+        <LoaderSpinner />
+        <h2>Spinner</h2>
+      </div>
+      <div>
+        <LoaderRipple />
+        <h2>Ripple</h2>
+      </div>
+      <div>
+        <LoaderHourglass />
+        <h2>Hourglass</h2>
+      </div>
+    </div>
   </section>
   <div class="glass" />
-  <LoaderContent class="blurLoaderContent" :blur="true" innerLoader="LoaderSpinner">
-    <div class="glass" />
+  <LoaderContent class="blurLoaderContent" :disable="loading" :blur="true" innerLoader="LoaderSpinner">
+    <div class="glass">
+      <h2>blur</h2>
+    </div>
   </LoaderContent>
-  <LoaderContent innerLoader="LoaderSpinner">
-    <div class="glass" />
+  <LoaderContent innerLoader="LoaderSpinner" :disable="loading">
+    <div class="glass">
+      <h2>opacity</h2>
+    </div>
   </LoaderContent>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import LoaderCircle from './components/LoaderCircle.vue';
 import LoaderFacebook from './components/LoaderFacebook.vue';
 import LoaderDualRing from './components/LoaderDualRing.vue';
@@ -55,6 +98,10 @@ export default defineComponent({
     LoaderHourglass,
     LoaderContent,
   },
+  setup() {
+    const loading = ref(true);
+    return { loading };
+  },
 });
 </script>
 
@@ -64,7 +111,7 @@ export default defineComponent({
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
   margin-top: 60px;
 
   & > div {
@@ -74,6 +121,23 @@ export default defineComponent({
   section {
     margin-bottom: 80px;
     background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .container {
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      & > div {
+        width: 80px;
+        margin: 40px 0;
+        h2 {
+          font-size: 16px;
+        }
+      }
+    }
   }
 
   .blurLoaderContent {
@@ -82,10 +146,28 @@ export default defineComponent({
 
   .glass {
     height: 100vh;
-    background-position: center;
+    background-position: center bottom;
     background-size: cover;
     background-repeat: no-repeat;
-    background-image: url(https://images.unsplash.com/photo-1646322758610-cf84eb050f31?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80);
+    background-image: url('assets/bg.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+      font-size: 10vw;
+    }
+  }
+
+  .control {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 20px;
+    background-color: #fff;
+    z-index: 99999;
+    box-shadow: 0px 0px 9px 0px #21212185;
+    border-radius: 4px;
   }
 }
 </style>

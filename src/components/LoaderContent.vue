@@ -1,18 +1,18 @@
 <template>
-  <div class="vb-loaderContent" :class="{ blur, disable }">
+  <div class="vb-loaderContent" :class="{ blur, disable: !disable }">
     <slot />
-    <LoaderFacebook v-if="innerLoader === 'LoaderFacebook' && !disable" />
-    <LoaderDualRing v-if="innerLoader === 'LoaderDualRing' && !disable" />
-    <LoaderCircle v-if="innerLoader === 'LoaderCircle' && !disable" />
-    <LoaderRoller v-if="innerLoader === 'LoaderRoller' && !disable" />
-    <LoaderRing v-if="innerLoader === 'LoaderRing' && !disable" />
-    <LoaderHeart v-if="innerLoader === 'LoaderHeart' && !disable" />
-    <LoaderGrid v-if="innerLoader === 'LoaderGrid' && !disable" />
-    <LoaderEllipsis v-if="innerLoader === 'LoaderEllipsis' && !disable" />
-    <LoaderDefault v-if="innerLoader === 'LoaderDefault' && !disable" />
-    <LoaderSpinner v-if="innerLoader === 'LoaderSpinner' && !disable" />
-    <LoaderRipple v-if="innerLoader === 'LoaderRipple' && !disable" />
-    <LoaderHourglass v-if="innerLoader === 'LoaderHourglass' && !disable" />
+    <LoaderFacebook v-if="innerLoader === 'LoaderFacebook' && disable" />
+    <LoaderDualRing v-if="innerLoader === 'LoaderDualRing' && disable" />
+    <LoaderCircle v-if="innerLoader === 'LoaderCircle' && disable" />
+    <LoaderRoller v-if="innerLoader === 'LoaderRoller' && disable" />
+    <LoaderRing v-if="innerLoader === 'LoaderRing' && disable" />
+    <LoaderHeart v-if="innerLoader === 'LoaderHeart' && disable" />
+    <LoaderGrid v-if="innerLoader === 'LoaderGrid' && disable" />
+    <LoaderEllipsis v-if="innerLoader === 'LoaderEllipsis' && disable" />
+    <LoaderDefault v-if="innerLoader === 'LoaderDefault' && disable" />
+    <LoaderSpinner v-if="innerLoader === 'LoaderSpinner' && disable" />
+    <LoaderRipple v-if="innerLoader === 'LoaderRipple' && disable" />
+    <LoaderHourglass v-if="innerLoader === 'LoaderHourglass' && disable" />
   </div>
 </template>
 
