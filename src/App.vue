@@ -53,13 +53,7 @@
     </div>
   </section>
   <div class="glass" />
-  <LoaderContent
-    class="blurLoaderContent"
-    :fullScreen="true"
-    :disable="loading"
-    :blur="true"
-    innerLoader="LoaderSpinner"
-  >
+  <LoaderContent class="blurLoaderContent" :disable="loading" :blur="true" innerLoader="LoaderSpinner">
     <div class="glass">
       <h2>blur</h2>
     </div>

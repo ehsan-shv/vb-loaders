@@ -1,29 +1,73 @@
 # vb-loader
 
-## Project setup
+<a href="https://www.npmjs.com/package/vb-loader"><img src="https://img.shields.io/npm/v/vb-loader.svg" alt="Version"></a>
+
+> Loader components for Vue3. [Demo](https://ehsan-shv.github.io/vb-loader/)
+
+## Components
+
+- LoaderFacebook
+- LoaderDualRing
+- LoaderCircle
+- LoaderRoller
+- LoaderRing
+- LoaderHeart
+- LoaderGrid
+- LoaderEllipsis
+- LoaderDefault
+- LoaderSpinner
+- LoaderRipple
+- LoaderHourglass
+- LoaderContent
+
+## Installation
+
 ```
-npm install
+npm i vb-loader
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+## Example
+
+```vue
+<template>
+  <LoaderRoller />
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+import { LoaderRoller } from './components/LoaderRoller.vue';
+
+export default defineComponent({
+  components: {
+    LoaderRoller,
+  },
+});
+</script>
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Content Loader Example
 
-### Run your unit tests
-```
-npm run test:unit
-```
+```vue
+<template>
+  <LoaderContent :disable="loading" :blur="true" innerLoader="LoaderSpinner">
+    <div>
+      <h1>Hello World!</h1>
+    </div>
+  </LoaderContent>
+</template>
 
-### Lints and fixes files
-```
-npm run lint
-```
+<script lang="ts">
+import { defineComponent, ref } from 'vue';
+import { LoaderContent } from './components/LoaderRoller.vue';
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+export default defineComponent({
+  components: {
+    LoaderContent,
+  },
+  setup() {
+    const loading = ref(true);
+    return { loading };
+  },
+});
+</script>
+```
