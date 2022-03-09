@@ -1,6 +1,6 @@
 # vb-loader
 
-<a href="https://www.npmjs.com/package/vb-loader"><img src="https://img.shields.io/npm/v/vb-loader.svg" alt="Version"></a>
+<a href="https://www.npmjs.com/package/vb-loaders"><img src="https://img.shields.io/npm/v/vb-loaders.svg" alt="Version"></a>
 
 > Loader components for Vue3. [Demo](https://ehsan-shv.github.io/vb-loader/)
 
