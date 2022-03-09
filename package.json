@@ -2,6 +2,14 @@
   "name": "vb-loader",
   "version": "0.1.0",
   "private": true,
+  "description": "Loader components for Vue3.",
+  "author": "Ehsan",
+  "keywords": [
+    "vue",
+    "nuxt",
+    "vue3",
+    "loader"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
