@@ -1,6 +1,6 @@
 {
   "name": "vb-loaders",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Loader components for Vue3.",
   "author": "Ehsan",
   "keywords": [
