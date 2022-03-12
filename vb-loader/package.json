@@ -1,6 +1,6 @@
 {
   "name": "vb-loaders",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Loader components for Vue3.",
   "author": "Ehsan",
   "keywords": [
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ehsan-shv/vb-loader.git"
+    "url": "git+https://github.com/ehsan-shv/vb-loaders.git"
   },
   "main": "dist/vb-loader.ssr.js",
   "browser": "dist/vb-loader.esm.js",
