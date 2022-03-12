@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/vb-loader/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/vb-loaders/' : '/',
 };
